@@ -45,7 +45,7 @@ class Blockchain {
         data
       );
       if (hash !== validatedHash) return false;
-      if (Math.abs(lastDifficulty - difficulty) > 1) return false;
+      if (Math.abs(lastDifficulty - difficulty) > 1) return false; //To ensure miners don't alter the difficulty
     }
     return true;
   }
